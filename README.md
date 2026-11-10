@@ -15,6 +15,9 @@ Esta es la **versión 2** del proyecto del equipo (rama `v2-clip-comida-mexicana
 | Certeza | Probabilidad sin calibrar | **Calibrada** (temperatura) y aviso si el modelo duda |
 | Tabla platillo → sabor | La del equipo | **La misma** para los 101 originales; nuevas filas para los 45 platillos agregados |
 | Interfaz | Gradio básica | Gradio con tarjeta de resultados, barras por sabor y botón de "ensuciar la foto" |
+| **Prueba tipo profesor** (284 fotos nuevas, 25 platillos, limpia + 18 ruidos): 5 sabores correctos | 33.3 % | **82.1 %** (93.3 % sin ruido) |
+| Prueba tipo profesor: exactitud por etiqueta | 75.9 % | **94.5 %** |
+| Test con ruido, comida mexicana: 5 sabores correctos | 22.6 % | **78.5 %** |
 
 Los resultados completos (antes contra después, con y sin ruido) están en `resultados/` y en el reporte (`docs/`).
 
