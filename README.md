@@ -100,6 +100,6 @@ Food-101: `https://data.vision.ee.ethz.ch/cvl/food-101.tar.gz` (5 GB), descompri
 
 ## Equipo
 
-Abarca Perez Daniel Isaac · Gómez Gómez Ernesto · Guerrero Pérez Paola Guadalupe · Mendoza Paez Alejandro · Olvera De La Huerta Santiago · Pérez Salinas Juan Jesús
+Abarca Perez Daniel Isaac · Gómez Gómez Ernesto · Guerra González Diego Alejandro · Guerrero Pérez Paola Guadalupe · Mendoza Paez Alejandro · Olvera De La Huerta Santiago · Pérez Salinas Juan Jesús
 
 Machine Learning — ESCOM, IPN — Grupo 6CM4
