@@ -1,0 +1,155 @@
+{
+  "todo_limpio": {
+    "n": 3981,
+    "platillo_top1": 0.6478271791007285,
+    "platillo_top3": 0.7706606380306456,
+    "f1_por_sabor": {
+      "acido": 0.770197486535009,
+      "amargo": 0.6848249027237354,
+      "dulce": 0.8656858092074039,
+      "picante": 0.6230248306997742,
+      "salado": 0.9623349095059515
+    },
+    "f1_macro": 0.7812135877343748,
+    "coincidencia_exacta": 0.8073348404923386,
+    "exactitud_por_etiqueta": 0.9404672192916352,
+    "base_siempre_salado_f1_macro": 0.1728712023962345,
+    "base_siempre_salado_exacta": 0.4963576990705853,
+    "ece_platillo": 0.11015933505765939,
+    "certeza_media": 0.7579865455627441
+  },
+  "todo_ruido": {
+    "n": 3981,
+    "platillo_top1": 0.26651595076613915,
+    "platillo_top3": 0.40517457925144434,
+    "f1_por_sabor": {
+      "acido": 0.4638447971781305,
+      "amargo": 0.3227848101265823,
+      "dulce": 0.5883376849434291,
+      "picante": 0.29835651074589126,
+      "salado": 0.8519338899301414
+    },
+    "f1_macro": 0.505051538584835,
+    "coincidencia_exacta": 0.5440844009042954,
+    "exactitud_por_etiqueta": 0.839638281838734,
+    "base_siempre_salado_f1_macro": 0.1726442033123929,
+    "base_siempre_salado_exacta": 0.49610650590303945,
+    "ece_platillo": 0.48427301634798336,
+    "certeza_media": 0.7507889866828918
+  },
+  "food101_limpio": {
+    "n": 3608,
+    "platillo_top1": 0.7075942350332595,
+    "platillo_top3": 0.8425720620842572,
+    "f1_por_sabor": {
+      "acido": 0.8322851153039832,
+      "amargo": 0.7839195979899497,
+      "dulce": 0.8878504672897196,
+      "picante": 0.7475083056478405,
+      "salado": 0.9699694299586405
+    },
+    "f1_macro": 0.8443065832380267,
+    "coincidencia_exacta": 0.8614190687361419,
+    "exactitud_por_etiqueta": 0.9590909090909091,
+    "base_siempre_salado_f1_macro": 0.17304607642711117,
+    "base_siempre_salado_exacta": 0.5349223946784922,
+    "ece_platillo": 0.0656088474155001,
+    "certeza_media": 0.7732030749320984
+  },
+  "food101_ruido": {
+    "n": 3607,
+    "platillo_top1": 0.29248683116163016,
+    "platillo_top3": 0.44330468533407263,
+    "f1_por_sabor": {
+      "acido": 0.48770491803278687,
+      "amargo": 0.3453815261044177,
+      "dulce": 0.5909961685823755,
+      "picante": 0.3629764065335753,
+      "salado": 0.8547842401500938
+    },
+    "f1_macro": 0.5283686518806497,
+    "coincidencia_exacta": 0.5788744108677571,
+    "exactitud_por_etiqueta": 0.8535070695869144,
+    "base_siempre_salado_f1_macro": 0.17296616837136114,
+    "base_siempre_salado_exacta": 0.5339617410590518,
+    "ece_platillo": 0.4630367679297841,
+    "certeza_media": 0.755523681640625
+  },
+  "mexicana_limpio": {
+    "n": 336,
+    "platillo_top1": 0.07738095238095238,
+    "platillo_top3": 0.08333333333333333,
+    "f1_por_sabor": {
+      "acido": 0.4460431654676259,
+      "amargo": 0.2857142857142857,
+      "dulce": 0.6583850931677019,
+      "picante": 0.3591549295774648,
+      "salado": 0.9057301293900185
+    },
+    "f1_macro": 0.5310055206634193,
+    "coincidencia_exacta": 0.30654761904761907,
+    "exactitud_por_etiqueta": 0.7738095238095238,
+    "base_siempre_salado_f1_macro": 0.17785123966942148,
+    "base_siempre_salado_exacta": 0.13690476190476192,
+    "ece_platillo": 0.5274468549039393,
+    "certeza_media": 0.6048277616500854
+  },
+  "mexicana_ruido": {
+    "n": 336,
+    "platillo_top1": 0.017857142857142856,
+    "platillo_top3": 0.041666666666666664,
+    "f1_por_sabor": {
+      "acido": 0.3404255319148936,
+      "amargo": 0.3125,
+      "dulce": 0.5773195876288659,
+      "picante": 0.15,
+      "salado": 0.846307385229541
+    },
+    "f1_macro": 0.44531050095466007,
+    "coincidencia_exacta": 0.2261904761904762,
+    "exactitud_por_etiqueta": 0.7154761904761905,
+    "base_siempre_salado_f1_macro": 0.17637271214642264,
+    "base_siempre_salado_exacta": 0.14583333333333334,
+    "ece_platillo": 0.6924609671391193,
+    "certeza_media": 0.7103180885314941
+  },
+  "web_limpio": {
+    "n": 373,
+    "platillo_top1": 0.06970509383378017,
+    "platillo_top3": 0.07506702412868632,
+    "f1_por_sabor": {
+      "acido": 0.4,
+      "amargo": 0.3448275862068966,
+      "dulce": 0.6298342541436464,
+      "picante": 0.3591549295774648,
+      "salado": 0.8881118881118881
+    },
+    "f1_macro": 0.5243857316079792,
+    "coincidencia_exacta": 0.28418230563002683,
+    "exactitud_por_etiqueta": 0.7603217158176944,
+    "base_siempre_salado_f1_macro": 0.17116564417177915,
+    "base_siempre_salado_exacta": 0.12332439678284182,
+    "ece_platillo": 0.5410924674518627,
+    "certeza_media": 0.610797643661499
+  },
+  "web_ruido": {
+    "n": 374,
+    "platillo_top1": 0.016042780748663103,
+    "platillo_top3": 0.0374331550802139,
+    "f1_por_sabor": {
+      "acido": 0.31645569620253167,
+      "amargo": 0.23880597014925373,
+      "dulce": 0.5619047619047619,
+      "picante": 0.15,
+      "salado": 0.8237476808905381
+    },
+    "f1_macro": 0.4181828218294171,
+    "coincidencia_exacta": 0.20855614973262032,
+    "exactitud_por_etiqueta": 0.7058823529411765,
+    "base_siempre_salado_f1_macro": 0.1694915254237288,
+    "base_siempre_salado_exacta": 0.13101604278074866,
+    "ece_platillo": 0.6890838442639233,
+    "certeza_media": 0.7051267027854919
+  },
+  "nota": "platillo_top1 en grupos con platillos nuevos cuenta como error: v1 no los conoce"
+}

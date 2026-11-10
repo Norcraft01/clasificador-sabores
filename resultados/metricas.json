@@ -1,0 +1,337 @@
+{
+  "todo_limpio": {
+    "n": 27866,
+    "platillo_top1": 0.9403933108447571,
+    "platillo_top3": 0.9862197660231106,
+    "f1_por_sabor": {
+      "acido": 0.9732313575525813,
+      "amargo": 0.9540176497909894,
+      "dulce": 0.9833311458196614,
+      "picante": 0.9715122470713525,
+      "salado": 0.9959670762482017
+    },
+    "f1_macro": 0.9756118952965572,
+    "coincidencia_exacta": 0.9761716787482955,
+    "exactitud_por_etiqueta": 0.9930955286011627,
+    "base_siempre_salado_f1_macro": 0.17276359781456413,
+    "base_siempre_salado_exacta": 0.4963755113758702,
+    "ece_platillo": 0.007232514962629917,
+    "certeza_media": 0.9331799149513245
+  },
+  "todo_ruido": {
+    "n": 27866,
+    "platillo_top1": 0.7371707457116199,
+    "platillo_top3": 0.8565994401779947,
+    "f1_por_sabor": {
+      "acido": 0.8521872210177274,
+      "amargo": 0.7940573770491803,
+      "dulce": 0.8829845814977973,
+      "picante": 0.8226680333870259,
+      "salado": 0.9687092568448501
+    },
+    "f1_macro": 0.8641212939593161,
+    "coincidencia_exacta": 0.8638125314002727,
+    "exactitud_por_etiqueta": 0.9582573745783391,
+    "base_siempre_salado_f1_macro": 0.17276359781456413,
+    "base_siempre_salado_exacta": 0.4963755113758702,
+    "ece_platillo": 0.012341741716058348,
+    "certeza_media": 0.7248289585113525
+  },
+  "food101_limpio": {
+    "n": 25250,
+    "platillo_top1": 0.9413069306930693,
+    "platillo_top3": 0.9857425742574257,
+    "f1_por_sabor": {
+      "acido": 0.9728105323411562,
+      "amargo": 0.9418837675350702,
+      "dulce": 0.9834539073132297,
+      "picante": 0.9681838267786125,
+      "salado": 0.9958215462874049
+    },
+    "f1_macro": 0.9724307160510947,
+    "coincidencia_exacta": 0.9778613861386138,
+    "exactitud_por_etiqueta": 0.993560396039604,
+    "base_siempre_salado_f1_macro": 0.17303370786516853,
+    "base_siempre_salado_exacta": 0.5346534653465347,
+    "ece_platillo": 0.007257917560268198,
+    "certeza_media": 0.9341127872467041
+  },
+  "food101_ruido": {
+    "n": 25250,
+    "platillo_top1": 0.7382178217821782,
+    "platillo_top3": 0.8562376237623762,
+    "f1_por_sabor": {
+      "acido": 0.8526042462196426,
+      "amargo": 0.7582659808963997,
+      "dulce": 0.8822690778119607,
+      "picante": 0.7947149498409591,
+      "salado": 0.9680147624173459
+    },
+    "f1_macro": 0.8511738034372616,
+    "coincidencia_exacta": 0.8712475247524752,
+    "exactitud_por_etiqueta": 0.9607920792079208,
+    "base_siempre_salado_f1_macro": 0.17303370786516853,
+    "base_siempre_salado_exacta": 0.5346534653465347,
+    "ece_platillo": 0.012045241363567865,
+    "certeza_media": 0.7261726260185242
+  },
+  "mexicana_limpio": {
+    "n": 2346,
+    "platillo_top1": 0.9254049445865302,
+    "platillo_top3": 0.989769820971867,
+    "f1_por_sabor": {
+      "acido": 0.9732441471571907,
+      "amargo": 0.9577464788732394,
+      "dulce": 0.9826589595375722,
+      "picante": 0.9765572672471534,
+      "salado": 0.9975851891601825
+    },
+    "f1_macro": 0.9775584083950676,
+    "coincidencia_exacta": 0.9569479965899403,
+    "exactitud_por_etiqueta": 0.9879795396419437,
+    "base_siempre_salado_f1_macro": 0.1771021377672209,
+    "base_siempre_salado_exacta": 0.14151747655583974,
+    "ece_platillo": 0.014351032960140526,
+    "certeza_media": 0.9184936881065369
+  },
+  "mexicana_ruido": {
+    "n": 2346,
+    "platillo_top1": 0.7084398976982097,
+    "platillo_top3": 0.8491048593350383,
+    "f1_por_sabor": {
+      "acido": 0.843065693430657,
+      "amargo": 0.8021978021978022,
+      "dulce": 0.8879082082965578,
+      "picante": 0.8646479387085005,
+      "salado": 0.9764861294583884
+    },
+    "f1_macro": 0.8748611544183811,
+    "coincidencia_exacta": 0.7847399829497016,
+    "exactitud_por_etiqueta": 0.9322250639386189,
+    "base_siempre_salado_f1_macro": 0.1771021377672209,
+    "base_siempre_salado_exacta": 0.14151747655583974,
+    "ece_platillo": 0.021559524966780156,
+    "certeza_media": 0.6945483684539795
+  },
+  "web_limpio": {
+    "n": 2616,
+    "platillo_top1": 0.9315749235474006,
+    "platillo_top3": 0.9908256880733946,
+    "f1_por_sabor": {
+      "acido": 0.9753623188405797,
+      "amargo": 0.9817073170731707,
+      "dulce": 0.9819890368050117,
+      "picante": 0.9765572672471534,
+      "salado": 0.9974160206718347
+    },
+    "f1_macro": 0.98260639212755,
+    "coincidencia_exacta": 0.9598623853211009,
+    "exactitud_por_etiqueta": 0.9886085626911315,
+    "base_siempre_salado_f1_macro": 0.17012302284710018,
+    "base_siempre_salado_exacta": 0.12691131498470948,
+    "ece_platillo": 0.013530202711211754,
+    "certeza_media": 0.9241762161254883
+  },
+  "web_ruido": {
+    "n": 2616,
+    "platillo_top1": 0.7270642201834863,
+    "platillo_top3": 0.8600917431192661,
+    "f1_por_sabor": {
+      "acido": 0.8500772797527048,
+      "amargo": 0.8764805414551607,
+      "dulce": 0.890924229808493,
+      "picante": 0.8643326039387309,
+      "salado": 0.9755973563802746
+    },
+    "f1_macro": 0.8914824022670726,
+    "coincidencia_exacta": 0.7920489296636085,
+    "exactitud_por_etiqueta": 0.9337920489296636,
+    "base_siempre_salado_f1_macro": 0.17012302284710018,
+    "base_siempre_salado_exacta": 0.12691131498470948,
+    "ece_platillo": 0.02185264725910232,
+    "certeza_media": 0.711859941482544
+  },
+  "temperatura": 0.6524509890072009,
+  "historia_validacion": [
+    [
+      5,
+      0.8041458599465799
+    ],
+    [
+      10,
+      0.7994425734525606
+    ],
+    [
+      15,
+      0.801068400882592
+    ],
+    [
+      20,
+      0.8018813145976077
+    ],
+    [
+      25,
+      0.8033329462315643
+    ],
+    [
+      30,
+      0.8017071188015329
+    ],
+    [
+      35,
+      0.8017071188015329
+    ],
+    [
+      40,
+      0.8020555103936825
+    ]
+  ],
+  "epocas": 5,
+  "fotos_validacion": 8611,
+  "extractor": "ViT-B-16-SigLIP2 (webli)",
+  "n_clases": 146,
+  "fotos_por_split": {
+    "train": 86110,
+    "test": 27866
+  },
+  "vectores_train": 154998,
+  "confusiones_top": [
+    [
+      "Bistec",
+      "Filete mignon",
+      74
+    ],
+    [
+      "Tartar de res",
+      "Tartar de atún",
+      48
+    ],
+    [
+      "Mousse de chocolate",
+      "Pastel de chocolate",
+      46
+    ],
+    [
+      "Filete mignon",
+      "Bistec",
+      39
+    ],
+    [
+      "Prime rib",
+      "Bistec",
+      36
+    ],
+    [
+      "Pay de manzana",
+      "Budín de pan",
+      33
+    ],
+    [
+      "Pastel de chocolate",
+      "Mousse de chocolate",
+      32
+    ],
+    [
+      "Falafel",
+      "Pastelitos de cangrejo",
+      31
+    ],
+    [
+      "Bistec",
+      "Chuleta de cerdo",
+      30
+    ],
+    [
+      "Tartar de atún",
+      "Tartar de res",
+      28
+    ],
+    [
+      "Crema de almejas",
+      "Bisque de langosta",
+      27
+    ],
+    [
+      "Bistec",
+      "Prime rib",
+      26
+    ],
+    [
+      "Club sándwich",
+      "Sándwich de queso",
+      25
+    ],
+    [
+      "Sándwich de cerdo deshebrado",
+      "Hamburguesa",
+      24
+    ],
+    [
+      "Chuleta de cerdo",
+      "Filete mignon",
+      23
+    ]
+  ],
+  "confiabilidad_ruido": [
+    [
+      0.0,
+      0.07793062925338745,
+      0.09399075500770417,
+      649
+    ],
+    [
+      0.1,
+      0.14939020574092865,
+      0.16873315363881403,
+      1855
+    ],
+    [
+      0.2,
+      0.2489061802625656,
+      0.2840973401245048,
+      1767
+    ],
+    [
+      0.30000000000000004,
+      0.350126177072525,
+      0.38498789346246975,
+      1652
+    ],
+    [
+      0.4,
+      0.4500010311603546,
+      0.4806701030927835,
+      1552
+    ],
+    [
+      0.5,
+      0.5487400889396667,
+      0.5711538461538461,
+      1560
+    ],
+    [
+      0.6000000000000001,
+      0.6510615348815918,
+      0.6628222523744912,
+      1474
+    ],
+    [
+      0.7000000000000001,
+      0.751603364944458,
+      0.7674706246134818,
+      1617
+    ],
+    [
+      0.8,
+      0.853131890296936,
+      0.8693131132917038,
+      2242
+    ],
+    [
+      0.9,
+      0.9786633849143982,
+      0.9798488664987406,
+      13498
+    ]
+  ]
+}

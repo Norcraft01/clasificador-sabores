@@ -1,0 +1,147 @@
+clase,nombre,sabores,fuente,acc_limpio,acc_ruido,n_test
+aguachile,Aguachile,SAP,nuevo,0.9608,0.6471,51
+apple_pie,Pay de manzana,D,food101,0.896,0.52,250
+arroz_con_leche,Arroz con leche,D,nuevo,0.9535,0.7674,43
+baby_back_ribs,Costillas BBQ,SD,food101,0.952,0.728,250
+baklava,Baklava,D,food101,0.948,0.752,250
+barbacoa,Barbacoa,S,nuevo,0.6818,0.3864,44
+beef_carpaccio,Carpaccio de res,SA,food101,0.948,0.78,250
+beef_tartare,Tartar de res,SA,food101,0.868,0.636,250
+beet_salad,Ensalada de betabel,DA,food101,0.896,0.676,250
+beignets,Beignets,D,food101,0.932,0.816,250
+bibimbap,Bibimbap,SP,food101,0.984,0.868,250
+birria,Birria,SP,nuevo,0.9107,0.5893,56
+bread_pudding,Budín de pan,D,food101,0.876,0.568,250
+breakfast_burrito,Burrito de desayuno,SP,food101,0.94,0.668,250
+bruschetta,Bruschetta,SA,food101,0.952,0.652,250
+caesar_salad,Ensalada César,SA,food101,0.976,0.764,250
+cafe_de_olla,Café de olla,DM,nuevo,0.9773,0.7955,44
+cafe_negro,Café negro,M,nuevo,0.9867,0.9333,75
+camarones_a_la_diabla,Camarones a la diabla,SP,nuevo,0.9423,0.6346,52
+cannoli,Cannoli,D,food101,0.992,0.748,250
+caprese_salad,Ensalada caprese,SA,food101,0.956,0.784,250
+carnitas,Carnitas,S,nuevo,0.8889,0.5333,45
+carrot_cake,Pastel de zanahoria,D,food101,0.932,0.708,250
+ceviche,Ceviche,AS,food101,0.868,0.636,250
+cheese_plate,Tabla de quesos,S,food101,0.972,0.78,250
+cheesecake,Pay de queso,D,food101,0.86,0.652,250
+chicken_curry,Pollo al curry,SP,food101,0.948,0.652,250
+chicken_quesadilla,Quesadilla,S,food101,0.9303,0.7038,287
+chicken_wings,Alitas,SP,food101,0.98,0.772,250
+chilaquiles,Chilaquiles,SP,nuevo,0.9153,0.6949,59
+chile_relleno,Chile relleno,SP,nuevo,0.8308,0.4923,65
+chiles_en_nogada,Chiles en nogada,SD,nuevo,0.9683,0.8889,63
+chiles_toreados,Chiles toreados,PS,nuevo,0.8654,0.7115,52
+chocolate_amargo,Chocolate amargo,DM,nuevo,1.0,0.9062,32
+chocolate_cake,Pastel de chocolate,DM,food101,0.896,0.716,250
+chocolate_mousse,Mousse de chocolate,DM,food101,0.828,0.556,250
+churros,Churros,D,food101,0.9828,0.811,291
+clam_chowder,Crema de almejas,S,food101,0.936,0.76,250
+club_sandwich,Club sándwich,S,food101,0.948,0.728,250
+cochinita_pibil,Cochinita pibil,SA,nuevo,0.9615,0.6923,52
+coctel_de_camaron,Cóctel de camarón,SAP,nuevo,0.9091,0.7727,44
+crab_cakes,Pastelitos de cangrejo,S,food101,0.936,0.712,250
+creme_brulee,Crème brûlée,D,food101,0.952,0.796,250
+croque_madame,Croque madame,S,food101,0.952,0.788,250
+cup_cakes,Cupcakes,D,food101,0.964,0.84,250
+deviled_eggs,Huevos rellenos,S,food101,0.98,0.828,250
+donuts,Donas,D,food101,0.944,0.824,250
+dulces_enchilados,Dulces enchilados,DAP,nuevo,0.963,0.7778,54
+dumplings,Dumplings,S,food101,0.94,0.836,250
+edamame,Edamame,S,food101,1.0,0.96,250
+eggs_benedict,Huevos benedictinos,S,food101,0.956,0.804,250
+elote,Elote preparado,SPA,nuevo,0.9038,0.7308,52
+enchiladas,Enchiladas,SP,nuevo,0.9062,0.5938,64
+ensalada_de_arugula,Ensalada de arúgula,SM,nuevo,0.9722,0.7222,72
+ensalada_de_nopales,Ensalada de nopales,SA,nuevo,0.9149,0.766,47
+escargots,Escargots,S,food101,0.94,0.816,250
+esquites,Esquites,SPA,nuevo,0.7872,0.5957,47
+falafel,Falafel,S,food101,0.912,0.648,250
+filet_mignon,Filete mignon,S,food101,0.84,0.564,250
+fish_and_chips,Fish and chips,S,food101,0.984,0.8,250
+flan,Flan,D,nuevo,1.0,0.7966,59
+flautas,Flautas,SP,nuevo,0.8525,0.623,61
+foie_gras,Foie gras,S,food101,0.86,0.524,250
+french_fries,Papas a la francesa,S,food101,0.984,0.876,250
+french_onion_soup,Sopa de cebolla,S,food101,0.936,0.704,250
+french_toast,Pan francés,D,food101,0.892,0.66,250
+fried_calamari,Calamares fritos,S,food101,0.952,0.764,250
+fried_rice,Arroz frito,S,food101,0.96,0.768,250
+frijoles_charros,Frijoles charros,S,nuevo,0.98,0.82,50
+frozen_yogurt,Yogur helado,DA,food101,0.968,0.832,250
+fruta_con_chile,Fruta con chile,DAP,nuevo,0.9322,0.661,59
+garlic_bread,Pan de ajo,S,food101,0.968,0.736,250
+gnocchi,Ñoquis,S,food101,0.932,0.692,250
+gorditas,Gorditas,SP,nuevo,0.9057,0.6415,53
+greek_salad,Ensalada griega,SA,food101,0.96,0.8,250
+grilled_cheese_sandwich,Sándwich de queso,S,food101,0.928,0.656,250
+grilled_salmon,Salmón a la parrilla,S,food101,0.976,0.7,250
+guacamole,Guacamole,SA,food101,0.9897,0.8517,290
+gyoza,Gyoza,S,food101,0.936,0.744,250
+hamburger,Hamburguesa,S,food101,0.96,0.752,250
+hot_and_sour_soup,Sopa agripicante,SAP,food101,0.984,0.86,250
+hot_dog,Hot dog,S,food101,0.972,0.772,250
+huaraches,Huaraches,SP,nuevo,0.898,0.6735,49
+huevos_rancheros,Huevos rancheros,SP,food101,0.934,0.6736,288
+hummus,Hummus,S,food101,0.968,0.676,250
+ice_cream,Helado,D,food101,0.896,0.7,250
+lasagna,Lasaña,S,food101,0.916,0.636,250
+limones,Limones,A,nuevo,1.0,0.9574,47
+lobster_bisque,Bisque de langosta,S,food101,0.928,0.784,250
+lobster_roll_sandwich,Rollo de langosta,S,food101,0.988,0.8,250
+macaroni_and_cheese,Macarrones con queso,S,food101,0.936,0.74,250
+macarons,Macarons,D,food101,0.992,0.9,250
+mangonada,Mangonada,DAP,nuevo,1.0,0.8667,60
+menudo,Menudo,SP,nuevo,0.9231,0.6731,52
+miso_soup,Sopa miso,S,food101,0.936,0.848,250
+mole_poblano,Mole poblano,SDPM,nuevo,0.9206,0.6032,63
+molletes,Molletes,S,nuevo,0.9583,0.6667,48
+mussels,Mejillones,S,food101,0.968,0.856,250
+nachos,Nachos,SP,food101,0.9564,0.6946,298
+omelette,Omelette,S,food101,0.94,0.652,250
+onion_rings,Aros de cebolla,S,food101,0.968,0.808,250
+oysters,Ostiones,S,food101,0.988,0.86,250
+pad_thai,Pad thai,SDA,food101,0.992,0.812,250
+paella,Paella,S,food101,0.964,0.744,250
+pambazo,Pambazo,SP,nuevo,0.9762,0.7619,42
+pan_dulce,Pan dulce,D,nuevo,0.9828,0.8621,58
+pancakes,Hot cakes,D,food101,0.956,0.772,250
+panna_cotta,Panna cotta,D,food101,0.932,0.668,250
+pastel_tres_leches,Pastel tres leches,D,nuevo,0.9844,0.7188,64
+peking_duck,Pato pekín,SD,food101,0.948,0.68,250
+pho,Pho,S,food101,0.98,0.836,250
+pico_de_gallo,Pico de gallo,SAP,nuevo,0.9811,0.8491,53
+pizza,Pizza,S,food101,0.992,0.868,250
+pork_chop,Chuleta de cerdo,S,food101,0.84,0.516,250
+poutine,Poutine,S,food101,0.952,0.78,250
+pozole,Pozole,SP,nuevo,0.9333,0.7167,60
+prime_rib,Prime rib,S,food101,0.888,0.74,250
+pulled_pork_sandwich,Sándwich de cerdo deshebrado,SD,food101,0.964,0.68,250
+rajas_con_crema,Rajas con crema,SP,nuevo,0.9792,0.7708,48
+ramen,Ramen,S,food101,0.964,0.78,250
+ravioli,Ravioles,S,food101,0.908,0.492,250
+red_velvet_cake,Pastel red velvet,D,food101,0.94,0.832,250
+risotto,Risotto,S,food101,0.896,0.552,250
+samosa,Samosa,SP,food101,0.984,0.78,250
+sashimi,Sashimi,S,food101,0.956,0.828,250
+scallops,Callos de hacha,S,food101,0.92,0.644,250
+seaweed_salad,Ensalada de algas,SA,food101,0.964,0.888,250
+shrimp_and_grits,Camarones con sémola,S,food101,0.976,0.664,250
+sopa_de_tortilla,Sopa de tortilla,SP,nuevo,0.94,0.76,50
+sopes,Sopes,SP,nuevo,0.8958,0.7917,48
+spaghetti_bolognese,Espagueti boloñesa,S,food101,0.976,0.844,250
+spaghetti_carbonara,Espagueti carbonara,S,food101,0.98,0.816,250
+spring_rolls,Rollos primavera,S,food101,0.96,0.772,250
+steak,Bistec,S,food101,0.708,0.456,250
+strawberry_shortcake,Pastel de fresas,D,food101,0.96,0.804,250
+sushi,Sushi,S,food101,0.956,0.792,250
+tacos,Tacos,SP,food101,0.8851,0.6149,296
+takoyaki,Takoyaki,S,food101,0.976,0.816,250
+tamales,Tamales,S,nuevo,0.9848,0.6061,66
+tiramisu,Tiramisú,DM,food101,0.92,0.704,250
+tlayuda,Tlayuda,S,nuevo,0.881,0.5714,42
+toronja,Toronja,AM,nuevo,0.9773,1.0,44
+torta_ahogada,Torta ahogada,SPA,nuevo,0.9565,0.8696,46
+tostadas,Tostadas,SP,nuevo,0.9677,0.5484,31
+tuna_tartare,Tartar de atún,SA,food101,0.848,0.62,250
+waffles,Waffles,D,food101,0.976,0.86,250

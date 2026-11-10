@@ -1,0 +1,3 @@
+ViT-B-16             openai                   limpio=0.873  ruido=0.487
+ViT-B-16-SigLIP2     webli                    limpio=0.925  ruido=0.660
+ViT-B-16             datacomp_xl_s13b_b90k    limpio=0.910  ruido=0.627

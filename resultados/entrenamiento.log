@@ -1,0 +1,12 @@
+227952 vectores | train 172220 | test 55732
+accuracy en validación por época: [(5, 0.8041458599465799), (10, 0.7994425734525606), (15, 0.801068400882592), (20, 0.8018813145976077), (25, 0.8033329462315643), (30, 0.8017071188015329), (35, 0.8017071188015329), (40, 0.8020555103936825)] -> mejor: 5
+temperatura calibrada: 0.652
+todo_limpio      platillo=0.940 top3=0.986 F1macro=0.976 exacta=0.976 n=27866
+todo_ruido       platillo=0.737 top3=0.857 F1macro=0.864 exacta=0.864 n=27866
+food101_limpio   platillo=0.941 top3=0.986 F1macro=0.972 exacta=0.978 n=25250
+food101_ruido    platillo=0.738 top3=0.856 F1macro=0.851 exacta=0.871 n=25250
+mexicana_limpio  platillo=0.925 top3=0.990 F1macro=0.978 exacta=0.957 n=2346
+mexicana_ruido   platillo=0.708 top3=0.849 F1macro=0.875 exacta=0.785 n=2346
+web_limpio       platillo=0.932 top3=0.991 F1macro=0.983 exacta=0.960 n=2616
+web_ruido        platillo=0.727 top3=0.860 F1macro=0.891 exacta=0.792 n=2616
+Guardado modelo_sabores_v2.npz

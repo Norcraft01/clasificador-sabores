@@ -1,0 +1,339 @@
+{
+  "fotos": 284,
+  "descartadas_por_parecido": 96,
+  "descartadas_no_comida": 20,
+  "platillos": 25,
+  "por_condicion": {
+    "limpia_0": {
+      "v2_ok_platillo": 0.8661971830985915,
+      "v2_exacta": 0.9330985915492958,
+      "v2_etiquetas_ok": 0.9788732394366197,
+      "v2_certeza": 0.8831584507042254,
+      "v1_ok_platillo": 0.31338028169014087,
+      "v1_exacta": 0.5,
+      "v1_etiquetas_ok": 0.8373239436619718
+    },
+    "gaussiano_1": {
+      "v2_ok_platillo": 0.8732394366197183,
+      "v2_exacta": 0.9436619718309859,
+      "v2_etiquetas_ok": 0.9809859154929578,
+      "v2_certeza": 0.876463028169014,
+      "v1_ok_platillo": 0.29225352112676056,
+      "v1_exacta": 0.49295774647887325,
+      "v1_etiquetas_ok": 0.832394366197183
+    },
+    "gaussiano_2": {
+      "v2_ok_platillo": 0.8556338028169014,
+      "v2_exacta": 0.926056338028169,
+      "v2_etiquetas_ok": 0.9781690140845068,
+      "v2_certeza": 0.8443866197183097,
+      "v1_ok_platillo": 0.23943661971830985,
+      "v1_exacta": 0.44366197183098594,
+      "v1_etiquetas_ok": 0.8056338028169014
+    },
+    "gaussiano_3": {
+      "v2_ok_platillo": 0.7887323943661971,
+      "v2_exacta": 0.8415492957746479,
+      "v2_etiquetas_ok": 0.952112676056338,
+      "v2_certeza": 0.7395323943661971,
+      "v1_ok_platillo": 0.10915492957746478,
+      "v1_exacta": 0.3028169014084507,
+      "v1_etiquetas_ok": 0.7570422535211268
+    },
+    "sal_pimienta_1": {
+      "v2_ok_platillo": 0.8380281690140845,
+      "v2_exacta": 0.9154929577464789,
+      "v2_etiquetas_ok": 0.9732394366197182,
+      "v2_certeza": 0.8365514084507042,
+      "v1_ok_platillo": 0.14084507042253522,
+      "v1_exacta": 0.36971830985915494,
+      "v1_etiquetas_ok": 0.7788732394366197
+    },
+    "sal_pimienta_2": {
+      "v2_ok_platillo": 0.7922535211267606,
+      "v2_exacta": 0.8838028169014085,
+      "v2_etiquetas_ok": 0.9640845070422536,
+      "v2_certeza": 0.7985112676056337,
+      "v1_ok_platillo": 0.10211267605633803,
+      "v1_exacta": 0.30985915492957744,
+      "v1_etiquetas_ok": 0.7373239436619717
+    },
+    "sal_pimienta_3": {
+      "v2_ok_platillo": 0.721830985915493,
+      "v2_exacta": 0.8133802816901409,
+      "v2_etiquetas_ok": 0.9450704225352112,
+      "v2_certeza": 0.7323806338028169,
+      "v1_ok_platillo": 0.07394366197183098,
+      "v1_exacta": 0.28169014084507044,
+      "v1_etiquetas_ok": 0.721830985915493
+    },
+    "desenfoque_1": {
+      "v2_ok_platillo": 0.8485915492957746,
+      "v2_exacta": 0.9225352112676056,
+      "v2_etiquetas_ok": 0.9753521126760564,
+      "v2_certeza": 0.865900704225352,
+      "v1_ok_platillo": 0.2711267605633803,
+      "v1_exacta": 0.4788732394366197,
+      "v1_etiquetas_ok": 0.8288732394366196
+    },
+    "desenfoque_2": {
+      "v2_ok_platillo": 0.7922535211267606,
+      "v2_exacta": 0.8661971830985915,
+      "v2_etiquetas_ok": 0.9612676056338029,
+      "v2_certeza": 0.8005697183098591,
+      "v1_ok_platillo": 0.20774647887323944,
+      "v1_exacta": 0.3626760563380282,
+      "v1_etiquetas_ok": 0.7943661971830985
+    },
+    "desenfoque_3": {
+      "v2_ok_platillo": 0.7112676056338029,
+      "v2_exacta": 0.8274647887323944,
+      "v2_etiquetas_ok": 0.9450704225352112,
+      "v2_certeza": 0.690742957746479,
+      "v1_ok_platillo": 0.15492957746478872,
+      "v1_exacta": 0.31690140845070425,
+      "v1_etiquetas_ok": 0.7711267605633803
+    },
+    "jpeg_1": {
+      "v2_ok_platillo": 0.8838028169014085,
+      "v2_exacta": 0.9507042253521126,
+      "v2_etiquetas_ok": 0.9830985915492957,
+      "v2_certeza": 0.8777056338028169,
+      "v1_ok_platillo": 0.2711267605633803,
+      "v1_exacta": 0.46830985915492956,
+      "v1_etiquetas_ok": 0.8232394366197181
+    },
+    "jpeg_2": {
+      "v2_ok_platillo": 0.8415492957746479,
+      "v2_exacta": 0.9049295774647887,
+      "v2_etiquetas_ok": 0.9697183098591549,
+      "v2_certeza": 0.847736971830986,
+      "v1_ok_platillo": 0.21830985915492956,
+      "v1_exacta": 0.3908450704225352,
+      "v1_etiquetas_ok": 0.7922535211267606
+    },
+    "jpeg_3": {
+      "v2_ok_platillo": 0.5915492957746479,
+      "v2_exacta": 0.7077464788732394,
+      "v2_etiquetas_ok": 0.917605633802817,
+      "v2_certeza": 0.6181767605633803,
+      "v1_ok_platillo": 0.03873239436619718,
+      "v1_exacta": 0.24647887323943662,
+      "v1_etiquetas_ok": 0.7133802816901408
+    },
+    "pixelado_1": {
+      "v2_ok_platillo": 0.8697183098591549,
+      "v2_exacta": 0.9330985915492958,
+      "v2_etiquetas_ok": 0.9767605633802816,
+      "v2_certeza": 0.8580126760563381,
+      "v1_ok_platillo": 0.1619718309859155,
+      "v1_exacta": 0.31690140845070425,
+      "v1_etiquetas_ok": 0.7612676056338028
+    },
+    "pixelado_2": {
+      "v2_ok_platillo": 0.8063380281690141,
+      "v2_exacta": 0.8908450704225352,
+      "v2_etiquetas_ok": 0.9683098591549296,
+      "v2_certeza": 0.7874116197183099,
+      "v1_ok_platillo": 0.03169014084507042,
+      "v1_exacta": 0.18309859154929578,
+      "v1_etiquetas_ok": 0.656338028169014
+    },
+    "pixelado_3": {
+      "v2_ok_platillo": 0.44014084507042256,
+      "v2_exacta": 0.5492957746478874,
+      "v2_etiquetas_ok": 0.8683098591549294,
+      "v2_certeza": 0.4674070422535212,
+      "v1_ok_platillo": 0.007042253521126761,
+      "v1_exacta": 0.20422535211267606,
+      "v1_etiquetas_ok": 0.6873239436619718
+    },
+    "combinado_1": {
+      "v2_ok_platillo": 0.8556338028169014,
+      "v2_exacta": 0.9295774647887324,
+      "v2_etiquetas_ok": 0.9795774647887323,
+      "v2_certeza": 0.8452841549295774,
+      "v1_ok_platillo": 0.1795774647887324,
+      "v1_exacta": 0.38028169014084506,
+      "v1_etiquetas_ok": 0.7915492957746477
+    },
+    "combinado_2": {
+      "v2_ok_platillo": 0.5035211267605634,
+      "v2_exacta": 0.6338028169014085,
+      "v2_etiquetas_ok": 0.8781690140845071,
+      "v2_certeza": 0.5574102112676057,
+      "v1_ok_platillo": 0.035211267605633804,
+      "v1_exacta": 0.2711267605633803,
+      "v1_etiquetas_ok": 0.7225352112676056
+    },
+    "combinado_3": {
+      "v2_ok_platillo": 0.20422535211267606,
+      "v2_exacta": 0.3380281690140845,
+      "v2_etiquetas_ok": 0.7978873239436618,
+      "v2_certeza": 0.2910827464788732,
+      "v1_ok_platillo": 0.017605633802816902,
+      "v1_exacta": 0.17253521126760563,
+      "v1_etiquetas_ok": 0.6929577464788731
+    }
+  },
+  "por_platillo": {
+    "tacos": {
+      "n_fotos": 8,
+      "v2_exacta_limpia": 0.875,
+      "v2_exacta_ruido": 0.5763888888888888,
+      "v1_exacta_ruido": 0.2222222222222222
+    },
+    "enchiladas": {
+      "n_fotos": 8,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9236111111111112,
+      "v1_exacta_ruido": 0.041666666666666664
+    },
+    "chilaquiles": {
+      "n_fotos": 11,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.803030303030303,
+      "v1_exacta_ruido": 0.045454545454545456
+    },
+    "pozole": {
+      "n_fotos": 16,
+      "v2_exacta_limpia": 0.9375,
+      "v2_exacta_ruido": 0.8472222222222222,
+      "v1_exacta_ruido": 0.1701388888888889
+    },
+    "tamales": {
+      "n_fotos": 15,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9296296296296296,
+      "v1_exacta_ruido": 0.5555555555555556
+    },
+    "mole_poblano": {
+      "n_fotos": 14,
+      "v2_exacta_limpia": 0.9285714285714286,
+      "v2_exacta_ruido": 0.7619047619047619,
+      "v1_exacta_ruido": 0.0
+    },
+    "elote": {
+      "n_fotos": 9,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.7592592592592593,
+      "v1_exacta_ruido": 0.0
+    },
+    "sopes": {
+      "n_fotos": 6,
+      "v2_exacta_limpia": 0.8333333333333334,
+      "v2_exacta_ruido": 0.8333333333333334,
+      "v1_exacta_ruido": 0.05555555555555555
+    },
+    "chiles_en_nogada": {
+      "n_fotos": 13,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.8846153846153846,
+      "v1_exacta_ruido": 0.0
+    },
+    "birria": {
+      "n_fotos": 12,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.8611111111111112,
+      "v1_exacta_ruido": 0.18055555555555555
+    },
+    "aguachile": {
+      "n_fotos": 14,
+      "v2_exacta_limpia": 0.9285714285714286,
+      "v2_exacta_ruido": 0.6388888888888888,
+      "v1_exacta_ruido": 0.0
+    },
+    "pan_dulce": {
+      "n_fotos": 10,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.8555555555555555,
+      "v1_exacta_ruido": 0.4388888888888889
+    },
+    "flan": {
+      "n_fotos": 8,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.875,
+      "v1_exacta_ruido": 0.3888888888888889
+    },
+    "guacamole": {
+      "n_fotos": 11,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.8282828282828283,
+      "v1_exacta_ruido": 0.4595959595959596
+    },
+    "chicken_quesadilla": {
+      "n_fotos": 10,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9277777777777778,
+      "v1_exacta_ruido": 0.5944444444444444
+    },
+    "churros": {
+      "n_fotos": 7,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.8809523809523809,
+      "v1_exacta_ruido": 0.7619047619047619
+    },
+    "nachos": {
+      "n_fotos": 11,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.7575757575757576,
+      "v1_exacta_ruido": 0.25757575757575757
+    },
+    "huevos_rancheros": {
+      "n_fotos": 2,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9166666666666666,
+      "v1_exacta_ruido": 0.05555555555555555
+    },
+    "pizza": {
+      "n_fotos": 15,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 1.0,
+      "v1_exacta_ruido": 0.7666666666666667
+    },
+    "hamburger": {
+      "n_fotos": 16,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9895833333333334,
+      "v1_exacta_ruido": 0.7291666666666666
+    },
+    "sushi": {
+      "n_fotos": 14,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9603174603174603,
+      "v1_exacta_ruido": 0.6071428571428571
+    },
+    "ice_cream": {
+      "n_fotos": 15,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9703703703703703,
+      "v1_exacta_ruido": 0.4962962962962963
+    },
+    "cafe_negro": {
+      "n_fotos": 8,
+      "v2_exacta_limpia": 1.0,
+      "v2_exacta_ruido": 0.9027777777777778,
+      "v1_exacta_ruido": 0.0
+    },
+    "ceviche": {
+      "n_fotos": 16,
+      "v2_exacta_limpia": 0.3125,
+      "v2_exacta_ruido": 0.2916666666666667,
+      "v1_exacta_ruido": 0.375
+    },
+    "chocolate_cake": {
+      "n_fotos": 15,
+      "v2_exacta_limpia": 0.8,
+      "v2_exacta_ruido": 0.7037037037037037,
+      "v1_exacta_ruido": 0.43333333333333335
+    }
+  },
+  "global_ruido": {
+    "v2_ok_platillo": 0.7343505477308294,
+    "v2_exacta": 0.8210093896713615,
+    "v2_etiquetas_ok": 0.9452660406885759,
+    "v1_ok_platillo": 0.14182316118935837,
+    "v1_exacta": 0.33294209702660404,
+    "v1_etiquetas_ok": 0.7593505477308293
+  }
+}

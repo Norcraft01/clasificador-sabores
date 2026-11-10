@@ -1,0 +1,8 @@
+v1 todo_limpio      platillo=0.648 F1macro=0.781 exacta=0.807
+v1 todo_ruido       platillo=0.267 F1macro=0.505 exacta=0.544
+v1 food101_limpio   platillo=0.708 F1macro=0.844 exacta=0.861
+v1 food101_ruido    platillo=0.292 F1macro=0.528 exacta=0.579
+v1 mexicana_limpio  platillo=0.077 F1macro=0.531 exacta=0.307
+v1 mexicana_ruido   platillo=0.018 F1macro=0.445 exacta=0.226
+v1 web_limpio       platillo=0.070 F1macro=0.524 exacta=0.284
+v1 web_ruido        platillo=0.016 F1macro=0.418 exacta=0.209

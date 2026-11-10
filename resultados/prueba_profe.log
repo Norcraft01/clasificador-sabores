@@ -1,0 +1,34 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tacos ok
+enchiladas ok
+chilaquiles ok
+pozole ok
+tamales ok
+mole_poblano ok
+elote ok
+sopes ok
+chiles_en_nogada ok
+birria ok
+aguachile ok
+pan_dulce ok
+flan ok
+guacamole ok
+chicken_quesadilla ok
+churros ok
+nachos ok
+huevos_rancheros ok
+pizza ok
+hamburger ok
+sushi ok
+ice_cream ok
+cafe_negro ok
+ceviche ok
+chocolate_cake ok
+{
+ "v2_ok_platillo": 0.7343505477308294,
+ "v2_exacta": 0.8210093896713615,
+ "v2_etiquetas_ok": 0.9452660406885759,
+ "v1_ok_platillo": 0.14182316118935837,
+ "v1_exacta": 0.33294209702660404,
+ "v1_etiquetas_ok": 0.7593505477308293
+} 284 fotos

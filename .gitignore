@@ -13,3 +13,16 @@ food-101
 features.npy
 features_300.npy
 embeddings_resnet50.npy
+
+# v2: datos pesados y material de trabajo (no se suben)
+datos/
+_reporte/
+*.zip
+
+# Credenciales y secretos
+.env
+.env.*
+*.pem
+*.key
+# pesos de visión (186 MB > límite de GitHub): van en el zip; sin ellos la app los descarga de Hugging Face
+pesos/

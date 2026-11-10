@@ -1,145 +1,102 @@
-# Clasificador de sabores en comida
+# Clasificador de sabores en comida — v2
 
-Modelo de aprendizaje automático que, a partir de una foto de comida, predice si es **ácida, amarga, dulce, picante y/o salada**. Es una clasificación **multi-etiqueta**: un mismo platillo puede tener varios sabores a la vez (por ejemplo, dulce y ácido).
+> Foto de comida → platillo + sabores (ácido, amargo, dulce, picante y/o salado) con su porcentaje de certeza. Aguanta fotos con ruido y conoce comida mexicana.
 
-Usa [Food-101](https://data.vision.ee.ethz.ch/cvl/food-101.tar.gz), una red **ResNet50 preentrenada** como extractor de características, **scikit-learn** para clasificar e interfaz web con **Gradio**.
+Esta es la **versión 2** del proyecto del equipo (rama `v2-clip-comida-mexicana`). La rama `main` conserva la versión original sin cambios, por si hay que regresar a ella.
 
-## Requisitos
+## ¿Qué cambió respecto a la v1?
 
-- Python 3.12
-- **uv** ([instalación](https://docs.astral.sh/uv/); en Arch: `sudo pacman -S uv`) **o** **conda** (Anaconda o Miniconda). Elige solo uno.
-- ~1 GB de espacio para torch (versión CPU) y los pesos de ResNet50.
+| | v1 (main) | v2 (esta rama) |
+|---|---|---|
+| Extractor de características | ResNet50 (ImageNet) | **SigLIP2 ViT-B/16** (Google, 2025) |
+| Platillos | 101 (Food-101) | **146** (Food-101 + 45 nuevos: 39 mexicanos y 6 de refuerzo para amargo y ácido) |
+| Fotos | 30,300 (300 por platillo) | **113,976** (Food-101 completo + 12,976 de internet filtradas) |
+| Ruido | No | **Entrena con una copia ruidosa de cada foto** (grano, sal y pimienta, desenfoque, JPEG, pixelado, iluminación) |
+| Certeza | Probabilidad sin calibrar | **Calibrada** (temperatura) y aviso si el modelo duda |
+| Tabla platillo → sabor | La del equipo | **La misma** para los 101 originales; nuevas filas para los 45 platillos agregados |
+| Interfaz | Gradio básica | Gradio con tarjeta de resultados, barras por sabor y botón de "ensuciar la foto" |
 
-## Instalación
+Los resultados completos (antes contra después, con y sin ruido) están en `resultados/` y en el reporte (`docs/`).
 
-Primero clona el repositorio:
+## Cómo correrlo (Windows, lo más fácil)
+
+1. Descomprime el zip.
+2. Doble clic en **`INICIAR.bat`**.
+   - La primera vez instala `uv` (gestor de Python) y las dependencias (~1 GB, tarda unos minutos).
+   - Después solo abre la app en el navegador (`http://127.0.0.1:7860`).
+
+## Cómo correrlo (cualquier sistema, a mano)
+
+Requisito: [uv](https://docs.astral.sh/uv/) (`pip install uv` también sirve).
 
 ```bash
-git clone https://github.com/ZakuroByte/clasificador-sabores.git
-cd clasificador-sabores
+uv run --extra cpu python app.py      # sin tarjeta NVIDIA (suficiente para usar la app)
+uv run --extra gpu python app.py      # con tarjeta NVIDIA (CUDA 12.6)
 ```
 
-### Opción A: con uv
+uv descarga Python 3.12 y todo lo necesario. En el zip los pesos vienen incluidos (`pesos/` y `modelo_sabores_v2.npz`), así que la app no descarga ningún modelo. En el repositorio `pesos/` no se sube (186 MB, más que el límite de GitHub): si falta, la app descarga SigLIP2 de Hugging Face la primera vez (~800 MB).
 
-```bash
-uv sync
-uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-```
+## Reentrenar desde cero (opcional, requiere GPU NVIDIA y ~10 GB libres)
 
-> Después de instalar torch, **no vuelvas a correr `uv sync`**: borraría torch del entorno. Con `uv run` no hay problema. Si lo corres por error, repite el segundo comando.
+Todos los comandos con `uv run --extra gpu python ...`:
 
-### Opción B: con conda
+| Paso | Script | Qué hace | Tiempo (GTX 1650) |
+|---|---|---|---|
+| 1 | `descargar_fotos.py` | Baja fotos de los 45 platillos nuevos y refuerzos mexicanos (Bing) | ~1.5 h |
+| 2 | `limpiar_fotos.py` | Quita fotos rotas, que no son comida, de otro platillo o repetidas (SigLIP2 zero-shot) | ~20 min |
+| 3 | `crear_indice.py` | Une Food-101 (descargar aparte en `datos/food-101`) y las fotos limpias; split train/test | segundos |
+| 4 | `extraer_embeddings.py --ruido-train-web 1` | Vector de 768 números por foto y por su copia con ruido | ~4 h |
+| 5 | `entrenar_clip.py` | Entrena el clasificador, calibra la certeza y evalúa | ~2 min |
+| 6 | `evaluar_v1.py` | Mide el modelo original con el mismo test (comparación justa) | ~15 min |
+| 7 | `prueba_profe.py descargar` / `evaluar` | Fotos nuevas + 6 tipos de ruido en 3 niveles | ~20 min |
 
-```bash
-conda create -n sabores python=3.12 -y
-conda activate sabores
-pip install pandas numpy scikit-learn joblib "pillow<13" "gradio>=5"
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-```
-
-Cada vez que abras una terminal nueva, activa el entorno con `conda activate sabores`.
-
-## Probar la app (sin entrenar)
-
-El repositorio ya incluye el modelo entrenado (`modelo_embeddings_A.joblib`).
-
-| uv | conda (con el entorno activado) |
-|---|---|
-| `uv run python app.py` | `python app.py` |
-
-Abre en el navegador la dirección que imprima la terminal (normalmente `http://127.0.0.1:7860`) y arrastra una foto de comida. La app muestra la probabilidad de cada sabor, los 3 platillos más parecidos y los sabores detectados (probabilidad mayor a 0.5).
-
-La primera vez, torchvision descarga los pesos de ResNet50 (~100 MB), y se guardan para las siguientes. Cada predicción tarda menos de un segundo en CPU.
-
-## Reentrenar el modelo (opcional)
-
-1. Descarga y descomprime Food-101 dentro de esta carpeta (~5 GB):
-
-   ```bash
-   wget -c https://data.vision.ee.ethz.ch/cvl/food-101.tar.gz
-   tar -xzf food-101.tar.gz
-   ```
-
-2. Genera el CSV de etiquetas (300 fotos por platillo, ~30,300 imágenes):
-
-   | uv | conda |
-   |---|---|
-   | `uv run python crear_csv.py` | `python crear_csv.py` |
-
-3. Extrae los vectores con ResNet50 (se corre una sola vez). Con GPU NVIDIA tarda unos minutos; solo con CPU, entre 20 y 40 minutos. Genera `embeddings_resnet50.npy` (~250 MB, no se sube al repo).
-
-   | uv | conda |
-   |---|---|
-   | `uv run python extraer_embeddings.py` | `python extraer_embeddings.py` |
-
-4. Entrena y compara (solo sklearn, tarda un par de minutos). Guarda `modelo_embeddings_A.joblib`, que usa la app.
-
-   | uv | conda |
-   |---|---|
-   | `uv run python entrenar_embeddings.py` | `python entrenar_embeddings.py` |
+Food-101: `https://data.vision.ee.ethz.ch/cvl/food-101.tar.gz` (5 GB), descomprimir en `datos/`.
 
 ## Cómo funciona
 
-1. **Etiquetas:** Food-101 trae las fotos agrupadas por platillo (101 categorías). Se asignó manualmente uno o varios sabores a cada categoría (diccionario en `crear_csv.py`), y todas sus fotos heredan esas etiquetas.
-2. **Características:** ResNet50 preentrenado en ImageNet (sin su capa final) convierte cada foto en un vector de 2048 números. No se entrena la red, solo se usa para extraer características.
-3. **Enfoque A (el que usa la app), platillo → sabor:** una regresión logística multiclase (softmax) predice cuál de los 101 platillos es. Luego la probabilidad de cada sabor se calcula sumando las probabilidades de los platillos que tienen ese sabor: `P(sabor) = P(platillo) @ M`, donde `M` es la matriz platillo-sabor.
-4. **Enfoque B, directo:** una regresión logística por sabor, como comparación.
-5. **Evaluación:** división 80/20 estratificada por platillo y F1 por sabor.
+1. **Características:** SigLIP2 (sin entrenarlo) convierte la foto en un vector de 768 números.
+2. **Platillo:** una capa lineal (regresión logística multinomial) da la probabilidad de cada uno de los 146 platillos. Se divide entre una temperatura `T` calibrada para que "80 % de certeza" acierte ~80 % de las veces.
+3. **Sabores:** `P(sabor) = P(platillo) @ M`, donde `M` es la tabla platillo → sabor (`catalogo.py`). Un sabor se marca si pasa de 50 %.
+4. **Ruido:** cada foto de entrenamiento se usa limpia y con una copia degradada al azar (`ruido.py`), así el modelo aprende a reconocer el platillo aunque la foto venga mal.
 
-## Resultados
+## Estructura
 
-F1 por sabor en el conjunto de prueba:
-
-| Modelo | Ácido | Amargo | Dulce | Picante | Salado | Promedio |
-|---|---|---|---|---|---|---|
-| **A) ResNet50 + platillo → sabor (u=0.5)** | 0.743 | 0.582 | 0.829 | 0.673 | 0.956 | **0.757** |
-| B) ResNet50 + un clasificador por sabor (u=0.5) | 0.581 | 0.493 | 0.747 | 0.464 | 0.919 | 0.641 |
-| Platillo → sabor con píxeles 32x32 + color (u=0.3) | 0.166 | 0.124 | 0.481 | 0.043 | 0.866 | 0.336 |
-| MLP con píxeles 32x32 + color (u=0.5) | 0.165 | 0.103 | 0.367 | 0.104 | 0.824 | 0.313 |
-
-La accuracy del clasificador de platillos pasó de 7.1% (píxeles y color) a 59.9% (ResNet50). El salto principal viene de la calidad de las características, no del clasificador.
-
-Los scripts `entrenar.py` y `entrenar_platillo.py` corresponden a los primeros enfoques (píxeles y color) y se conservan como punto de comparación.
+```
+├── app.py                    # Interfaz web (Gradio)
+├── catalogo.py               # 146 platillos: sabores, nombre en español y búsquedas
+├── comun.py                  # Carga de SigLIP2 y utilidades
+├── ruido.py                  # Generador de ruido (entrenamiento y prueba controlada)
+├── descargar_fotos.py        # Paso 1
+├── limpiar_fotos.py          # Paso 2
+├── crear_indice.py           # Paso 3
+├── extraer_embeddings.py     # Paso 4
+├── entrenar_clip.py          # Paso 5
+├── evaluar_v1.py             # Paso 6
+├── prueba_profe.py           # Paso 7
+├── comparar_extractores.py   # Comparación de extractores (por qué SigLIP2)
+├── modelo_sabores_v2.npz     # Modelo entrenado (sin pickle: solo arreglos numpy)
+├── pesos/                    # Pesos de visión de SigLIP2 en fp16 (186 MB, Apache 2.0; solo en el zip)
+├── resultados/               # Métricas en JSON/CSV
+├── ejemplos/                 # Fotos de ejemplo para la app
+├── docs/                     # Reporte (docx y pdf)
+├── entrenar.py, entrenar_platillo.py, entrenar_embeddings.py, extraer_embeddings_v1.py, crear_csv.py, utils.py
+│                             # Scripts de la v1 (se conservan como referencia)
+└── modelo_embeddings_A.joblib  # Modelo v1 (para la comparación)
+```
 
 ## Limitaciones
 
-- **Solo conoce 101 platillos.** Una foto de algo fuera de Food-101 (una toronja, un café) se interpreta como el platillo más parecido de los 101.
-- **Evaluación optimista:** la división es por foto, no por platillo, así que el modelo ya vio los platillos de prueba durante el entrenamiento. Con platillos totalmente nuevos, el resultado sería menor.
-- **Etiquetas por platillo, no por foto:** todas las fotos de un platillo comparten sabor, aunque en la realidad varíe (con o sin salsa, por ejemplo). Las etiquetas también son subjetivas.
-- **Clases desbalanceadas:** hay muchos más platillos salados que amargos (solo chocolate y tiramisú).
-- **El sabor no siempre se ve en una foto.**
+- Solo conoce 146 platillos: si le das otro, contesta el más parecido (por eso existe el aviso de "no estoy seguro").
+- La etiqueta de sabor es por platillo, no por foto (unos tacos sin salsa siguen marcados como picantes).
+- Las fotos de internet pueden tener errores de etiqueta aunque se filtraron.
 
-## Posibles mejoras
+## Licencias
 
-- Agregar categorías nuevas de amargo, ácido y picante (café, toronja, limón, chiles) con fotos de otras fuentes.
-- Evaluar dejando platillos completos fuera del entrenamiento.
-- Probar otros extractores (EfficientNet, ViT) o hacer fine-tuning de la red.
+- SigLIP2 (Google): Apache 2.0. open_clip, timm, Gradio, scikit-learn, PyTorch, icrawler: licencias permisivas (MIT/Apache/BSD).
+- Food-101: uso para investigación. Las fotos descargadas de internet no se incluyen en el repositorio.
 
-## Estructura del proyecto
+## Equipo
 
-```
-├── app.py                       # Interfaz web (Gradio)
-├── crear_csv.py                 # Genera etiquetas.csv a partir de Food-101
-├── extraer_embeddings.py        # ResNet50: foto -> vector de 2048 números
-├── entrenar_embeddings.py       # Entrena y compara los enfoques A y B
-├── entrenar.py                  # Primer enfoque (píxeles + color), referencia
-├── entrenar_platillo.py         # Segundo enfoque (píxeles + platillo), referencia
-├── utils.py                     # Extracción de características simples y constantes
-├── etiquetas.csv                # Etiquetas de sabor por imagen
-├── modelo_embeddings_A.joblib   # Modelo que usa la app
-├── pyproject.toml               # Dependencias
-└── uv.lock                      # Versiones exactas
-```
+Abarca Perez Daniel Isaac · Gómez Gómez Ernesto · Guerrero Pérez Paola Guadalupe · Mendoza Paez Alejandro · Olvera De La Huerta Santiago · Pérez Salinas Juan Jesús
 
-`food-101/` y los archivos `.npy` no se suben al repositorio por su tamaño.
-
-## Trabajo en equipo
-
-Cada integrante trabaja en su propia rama y abre un Pull Request:
-
-```bash
-git checkout -b mi-mejora
-git add .
-git commit -m "Describe el cambio"
-git push -u origin mi-mejora
-```
+Machine Learning — ESCOM, IPN — Grupo 6CM4
